@@ -108,7 +108,7 @@ def home_screen():
     st.markdown("#### 🚀 Quick Actions")
     c1, c2, c3, c4 = st.columns(4)
     with c1:
-        st.page_link("app.py", label="➕ Add Products", disabled=True)
+        #st.page_link("app.py", label="➕ Add Products", disabled=True)
         if st.button("➕ Ingest Products", use_container_width=True):
             st.session_state["page"] = "ingest"
     with c2:
