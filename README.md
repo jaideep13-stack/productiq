@@ -84,13 +84,5 @@ streamlit run app.py
 5. **Pricing** — Select any product → get comparable-based price analysis
 6. **Enrichment** — AI auto-tag with categories, style tags, SEO title/description
 
----
 
-## Interview Talking Points
 
-- **Why BGE-large over OpenAI embeddings?** Free, self-hosted, top of MTEB leaderboard, no API cost at scale
-- **Why FAISS over Qdrant?** Local demo — same algorithm (HNSW/flat), Qdrant for production
-- **What is RRF?** Reciprocal Rank Fusion — merges ranked lists without score calibration: score = Σ 1/(k + rank)
-- **Why pHash before vector search?** Catches pixel-level duplicates in microseconds vs milliseconds for vector search — 1000x faster pre-filter
-- **Why closed vocabulary for LLM tags?** Prevents "scandinavian" vs "nordic" drift — LLM picks from fixed taxonomy, not free-form
-- **Why statistics for pricing, not LLM?** LLM hallucinates prices. Statistics on 50 real comparables are accurate. LLM only writes the explanation.
